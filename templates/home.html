@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <title>Homepage</title>
+            <link href="{% static 'css/Homepage.css' %}" rel="stylesheet" media="all">
+            <script src="https://kit.fontawesome.com/2d2e379b4b.js" crossorigin="anonymous"></script>
+        </head>
+        <body>
+
+</head>
+ <!-- Navbar section start -->
+ <div class="bg_img">
+    <nav class="navbar">
+        <div class="max-width">
+            {% csrf_token %}
+            <img src="{% static '/images/logo1.jpg' %}" alt="Hi!" /> <span> </span> </div>
+            <ul class="nav"><center>
+            <li><a href="#home">Home</a></li>
+            <li><a href="{% url 'aboutus' %}">About Us</a></li>
+            <li><a href="#contact">Menu</a></li>
+            <li><a href="cart">cart</a></li>
+            <li><a href="{% url 'signup' %}">LogOut</a></li>
+        </center>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Home section start -->
+<section class="home" id="home">
+    <div class="max-width">
+        <div class="home-content">
+        <div class="text-1">Welcome {{username}}</div>
+        <p class="GuestName"> to Friends Cafe bar</p>
+        <br>
+
+        </div>
+    </div>
+</section>
+
+<!-- Contact section start -->
+<section class="contact" id="contact">
+    <span class="bg-design"></span>
+    <span class="bg-design"></span>
+    <span class="bg-design"></span>
+    <span class="bg-design"></span>
+
+    <div class="con-div">
+        <h1>Get in Touch</h1>
+        <p> Send message! How we can help you? </p>
+
+        <div class="set-con-div">
+            <div class="msg-div">
+                <input type="text" name="username" placeholder="Enter your name">
+                <input type="text" name="e-mail" placeholder="Enter your e-mail">
+                <textarea name="message" id="con-div-msg" maxlength="400" placeholder="Go ahead, We are listening..."></textarea>
+                <input type="submit" name="submit">
+            </div>
+            
+            <div class="con-social-div">
+                <div class="soc-head">
+                    <span></span> <p>Socail media</p> <span></span>
+                </div>
+
+                <div class="soc-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="soc-icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="soc-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+
+            <div class="con-num-div">
+                <div class="num-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Bopal, Ahemdabad, Gujarat</p>
+                </div>
+                <div class="num-info">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>675-908-7557</p>
+                </div>
+                <div class="num-info">
+                    <i class="fas fa-envelope"></i>
+                    <p>FriendsCafebar@gmail.com</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
+</body>
+</html>
